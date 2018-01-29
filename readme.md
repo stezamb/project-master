@@ -1,57 +1,37 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Explication du projet 
+Dans le cadre d’un projet « étudiant » en Master 1 S2I, nous devons réaliser un site web d’aide à la gestion des départements de l’université. Nous avons déjà réalisé les maquettes du site. 
+<ul>
+Le site est décomposé en 7 interfaces qui sont les suivantes :
+ <li><strong>Une interface de connexion</strong></li>
+ <li><strong>Une interface de gestion des professeurs et étudiants :</strong> un professeur aura la possibilité de modifier sa propre fiche et les élèves auront juste un accès en lecture.</li>
+ <li><strong>Une interface pour la gestion des notes : </strong>le professeur choisi sa classe puis il peut ensuite choisir les modules pour lesquels il enseigne et renseigner les notes de l’élève sélectionné.</li>
+ <li><strong>Une interface de gestion des salles accessible pour le chef de filière et l’administrateur :</strong> le chef de filière pourra choisir une salle et y affecter le nombre d’heures pour une UE qui aura lieu dans cette salle. L’administrateur, lui, pourra créer les salles et y ajouter le nombre de places disponibles par salle ainsi que le nombre de pc et les logiciels installés sur chaque poste.</li>
+ <li><strong>Une interface de création des filières : </strong>accessible par l’administrateur en lecture et écriture. Cette interface permet d’ajouter des filières pour chaque composante. </li>
+ <li><strong>Une interface pour la création et l’affichage de maquette des filières : </strong>accessibles en écriture et lecture par le chef de filière et pour les autres ils auront un accès uniquement en lecture. </li>
+ <li><strong>Une interface de gestion des emplois du temps : </strong>l’administrateur et le chef de filière pourront organiser les emplois du temps de chaque professeur et de chaque classe. Les professeurs et les élèves auront quant à eux un accès en lecture.</li>
+</ul>
+<ul> 
+ Il y a donc 4 accès différents :
+ <li><strong>L’administrateur : </strong>il aura accès à tout.</li>
+ <li><strong>Le chef de filière : </strong>il pourra accéder et modifier toutes les parties associées à sa filière.</li>
+ <li><stong>Le professeur : </strong>il aura un accès en lecture sauf pour sa fiche personnelle et les notes de ses étudiants qu’il pourra modifier.</li>
+ <li><strong>L’élève : </strong>il aura accès en lecture à la liste des professeurs et des étudiants. Il pourra également accéder à ses notes et à son emploi du temps.</li>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Prérequis
 
-## About Laravel
+Node.JS, Composer, PhpMyAdmin, MySQL, Php7
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+# Installation
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+git clone https://github.com/Master-S2I-Corti/project-master.git
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+ - Aller sur PhpMyAdmin : localhost/phpMyAdmin <br />
+ - Creer une base de donnée : projet <br />
+ - Executer le fichier Projer.sql dans phpMyAdmin <br />
+ - Exécuter:<br />
+    CREATE USER 'projet-master'@'localhost' IDENTIFIED BY 'dptinfo';<br />
+    GRANT ALL PRIVILEGES ON projet TO 'projet-master'@'localhost';<br />
 
-## Learning Laravel
+Aller sur le site localhost/public/register<br />
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-## Lien Présentation 
-
-Présentation du projet [Présentation](https://drive.google.com/file/d/1-YpYn79Z1K1x63cZMOJAG6gPC408KrhA/view?usp=sharing).
